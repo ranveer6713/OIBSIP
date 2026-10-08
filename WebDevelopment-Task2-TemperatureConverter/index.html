@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ThermoConvert — Instantly convert temperatures between Celsius, Fahrenheit, and Kelvin with real-time validation." />
+  <title>ThermoConvert — Temperature Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background decoration -->
+  <div class="bg-orb bg-orb--1" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb--2" aria-hidden="true"></div>
+
+  <main class="page-center">
+
+    <!-- ── Header ── -->
+    <header class="app-header">
+      <div class="logo-wrap">
+        <span class="logo-icon" aria-hidden="true">🌡️</span>
+      </div>
+      <h1 class="app-title">ThermoConvert</h1>
+      <p class="app-subtitle">Instant temperature conversion across all units</p>
+    </header>
+
+    <!-- ── Converter Card ── -->
+    <section class="card" aria-label="Temperature Converter">
+
+      <!-- Input Row -->
+      <div class="input-group">
+        <label for="tempInput" class="field-label">Temperature Value</label>
+        <div class="input-wrap" id="inputWrap">
+          <input
+            type="number"
+            id="tempInput"
+            class="temp-input"
+            placeholder="Enter temperature…"
+            autocomplete="off"
+            aria-describedby="inputError"
+            aria-required="true"
+          />
+          <span class="input-unit-badge" id="unitBadge">°C</span>
+        </div>
+        <p class="error-msg" id="inputError" role="alert" aria-live="polite"></p>
+      </div>
+
+      <!-- Unit Selector -->
+      <div class="unit-group">
+        <span class="field-label">Input Unit</span>
+        <div class="radio-row" role="radiogroup" aria-label="Select input unit">
+
+          <label class="radio-card" for="unitC">
+            <input type="radio" id="unitC" name="unit" value="C" checked />
+            <span class="radio-face">
+              <span class="radio-symbol">°C</span>
+              <span class="radio-name">Celsius</span>
+            </span>
+          </label>
+
+          <label class="radio-card" for="unitF">
+            <input type="radio" id="unitF" name="unit" value="F" />
+            <span class="radio-face">
+              <span class="radio-symbol">°F</span>
+              <span class="radio-name">Fahrenheit</span>
+            </span>
+          </label>
+
+          <label class="radio-card" for="unitK">
+            <input type="radio" id="unitK" name="unit" value="K" />
+            <span class="radio-face">
+              <span class="radio-symbol">K</span>
+              <span class="radio-name">Kelvin</span>
+            </span>
+          </label>
+
+        </div>
+      </div>
+
+      <!-- Convert Button -->
+      <button class="convert-btn" id="convertBtn" type="button" aria-label="Convert temperature">
+        <span class="btn-text">Convert</span>
+        <span class="btn-icon" aria-hidden="true">→</span>
+      </button>
+
+      <!-- Results -->
+      <div class="results-section" id="resultsSection" aria-live="polite" aria-label="Conversion results">
+
+        <div class="results-label">Converted Values</div>
+
+        <div class="results-grid">
+
+          <div class="result-card" id="resC">
+            <div class="res-icon">🌡️</div>
+            <div class="res-body">
+              <div class="res-unit">Celsius</div>
+              <div class="res-value" id="valC">—</div>
+              <div class="res-suffix">°C</div>
+            </div>
+          </div>
+
+          <div class="result-card" id="resF">
+            <div class="res-icon">🌡️</div>
+            <div class="res-body">
+              <div class="res-unit">Fahrenheit</div>
+              <div class="res-value" id="valF">—</div>
+              <div class="res-suffix">°F</div>
+            </div>
+          </div>
+
+          <div class="result-card" id="resK">
+            <div class="res-icon">🌡️</div>
+            <div class="res-body">
+              <div class="res-unit">Kelvin</div>
+              <div class="res-value" id="valK">—</div>
+              <div class="res-suffix">K</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Absolute-zero / special message -->
+        <div class="special-msg" id="specialMsg" aria-live="assertive"></div>
+
+      </div>
+
+      <!-- Temperature Feel Bar -->
+      <div class="feel-bar-wrap" id="feelBarWrap">
+        <div class="feel-bar-label">Temperature Feel</div>
+        <div class="feel-bar-track">
+          <div class="feel-bar-fill" id="feelBarFill"></div>
+          <div class="feel-marker" id="feelMarker"></div>
+        </div>
+        <div class="feel-bar-ticks">
+          <span>−50°C</span>
+          <span>0°C</span>
+          <span>20°C</span>
+          <span>37°C</span>
+          <span>60°C+</span>
+        </div>
+        <div class="feel-tag" id="feelTag"></div>
+      </div>
+
+    </section>
+
+    <!-- Formula Reference -->
+    <section class="formula-strip" aria-label="Conversion Formulas">
+      <div class="formula-item">
+        <span class="f-expr">°C → °F</span>
+        <span class="f-rule">(C × 9/5) + 32</span>
+      </div>
+      <div class="formula-divider" aria-hidden="true">|</div>
+      <div class="formula-item">
+        <span class="f-expr">°F → °C</span>
+        <span class="f-rule">(F − 32) × 5/9</span>
+      </div>
+      <div class="formula-divider" aria-hidden="true">|</div>
+      <div class="formula-item">
+        <span class="f-expr">K ↔ °C</span>
+        <span class="f-rule">K = C + 273.15</span>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <p>OIBSIP Task 2 &mdash; Web Development Track</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
