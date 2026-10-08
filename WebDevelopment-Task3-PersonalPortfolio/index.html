@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ranveer Sangwan — AI Engineer & Full-Stack Developer. Portfolio showcasing projects in Machine Learning, Computer Vision, and Web Development." />
+  <title>Ranveer Sangwan — AI Engineer & Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar" id="navbar" aria-label="Main Navigation">
+    <div class="nav-inner container">
+      <a href="#home" class="nav-brand" aria-label="Home">RS</a>
+      <ul class="nav-links" id="navLinks" role="menubar">
+        <li><a href="#about"   role="menuitem">About</a></li>
+        <li><a href="#skills"  role="menuitem">Skills</a></li>
+        <li><a href="#projects" role="menuitem">Projects</a></li>
+        <li><a href="#experience" role="menuitem">Experience</a></li>
+        <li><a href="#contact" class="nav-cta" role="menuitem" id="nav-contact-btn">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-orb orb-1" aria-hidden="true"></div>
+    <div class="hero-bg-orb orb-2" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="hero-greeting">👋 Hello, I'm</div>
+        <h1 class="hero-name">Ranveer<br/><span class="name-accent">Sangwan</span></h1>
+        <div class="hero-roles">
+          <span class="role-badge">AI Engineer</span>
+          <span class="role-sep">·</span>
+          <span class="role-badge">ML Developer</span>
+          <span class="role-sep">·</span>
+          <span class="role-badge">Full-Stack Builder</span>
+        </div>
+        <p class="hero-bio">
+          B.Tech AI student at BKBIET · Building real, usable software powered by Machine Learning and Computer Vision.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary" id="hero-projects-btn">View Projects</a>
+          <a href="#contact"  class="btn-outline"  id="hero-contact-btn">Get In Touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/ranveer6713"             target="_blank" rel="noopener" class="social-pill" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            ranveer6713
+          </a>
+          <a href="https://linkedin.com/in/Ranveer-sangwan" target="_blank" rel="noopener" class="social-pill" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Ranveer-sangwan
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <div class="photo-ring" aria-hidden="true"></div>
+        <img src="assets/profile.jpg" alt="Ranveer Sangwan" class="hero-photo" width="320" height="380" loading="eager" />
+        <div class="photo-tag" aria-hidden="true">
+          <span class="tag-dot"></span> Open to Opportunities
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a <strong>B.Tech Artificial Intelligence</strong> student at B. K. Birla Institute of Engineering and Technology, Pilani — hands-on with Python, machine learning, and computer vision, focused on building real, usable software rather than just theory.
+          </p>
+          <p>
+            I've shipped a <strong>real-time face recognition attendance system</strong>, an <strong>AI-driven mock interview platform</strong> powered by LLMs, and a <strong>QR-based attendance system</strong> using Django and React during a technical bootcamp with BITS Pilani.
+          </p>
+          <p>
+            Certified in <strong>C/C++ and Java</strong> by IIT Bombay and in <strong>Machine Learning for Cyber Security</strong> by Codec Technology. When I'm not coding, I lead technical events and hackathons as Team Lead at NSCC BKBIET.
+          </p>
+
+          <div class="about-details">
+            <div class="detail-item">
+              <span class="detail-icon">🎓</span>
+              <span>B.Tech AI · BKBIET, Pilani</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">📍</span>
+              <span>Pilani, Rajasthan, India</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">📧</span>
+              <span>ranveersangwan22@gmail.com</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">📞</span>
+              <span>+91 8000286981</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-box">
+            <div class="stat-num">3+</div>
+            <div class="stat-lbl">Major Projects</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">2</div>
+            <div class="stat-lbl">Certifications</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">2</div>
+            <div class="stat-lbl">Hackathon Awards</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">1+</div>
+            <div class="stat-lbl">Year Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SKILLS ══ -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Technical Skills</span>
+        <h2 class="section-title">What I Work With</h2>
+      </div>
+
+      <div class="skills-wrapper">
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Programming Languages</h3>
+          <div class="skill-grid">
+            <div class="skill-chip"><span class="chip-icon">🐍</span> Python</div>
+            <div class="skill-chip"><span class="chip-icon">⚙️</span> C++</div>
+            <div class="skill-chip"><span class="chip-icon">🔵</span> C</div>
+            <div class="skill-chip"><span class="chip-icon">🗄️</span> SQL</div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Frameworks & Libraries</h3>
+          <div class="skill-grid">
+            <div class="skill-chip"><span class="chip-icon">⚛️</span> React</div>
+            <div class="skill-chip"><span class="chip-icon">🟢</span> Node.js</div>
+            <div class="skill-chip"><span class="chip-icon">🌶️</span> Flask</div>
+            <div class="skill-chip"><span class="chip-icon">🦖</span> Django</div>
+            <div class="skill-chip"><span class="chip-icon">📊</span> NumPy</div>
+            <div class="skill-chip"><span class="chip-icon">🐼</span> Pandas</div>
+            <div class="skill-chip"><span class="chip-icon">🤖</span> Scikit-learn</div>
+            <div class="skill-chip"><span class="chip-icon">📈</span> Matplotlib</div>
+            <div class="skill-chip"><span class="chip-icon">🌊</span> Seaborn</div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Core Concepts</h3>
+          <div class="skill-grid">
+            <div class="skill-chip"><span class="chip-icon">🧠</span> Machine Learning</div>
+            <div class="skill-chip"><span class="chip-icon">👁️</span> Computer Vision</div>
+            <div class="skill-chip"><span class="chip-icon">🔢</span> Data Structures</div>
+            <div class="skill-chip"><span class="chip-icon">⚡</span> Algorithms</div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Developer Tools</h3>
+          <div class="skill-grid">
+            <div class="skill-chip"><span class="chip-icon">🐙</span> Git / GitHub</div>
+            <div class="skill-chip"><span class="chip-icon">💻</span> VS Code</div>
+            <div class="skill-chip"><span class="chip-icon">🔁</span> n8n</div>
+            <div class="skill-chip"><span class="chip-icon">🤖</span> OpenAI API</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS ══ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Projects</span>
+        <h2 class="section-title">Things I've Built</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card" id="proj-attendance">
+          <div class="proj-header">
+            <div class="proj-icon">👁️</div>
+            <div class="proj-links">
+              <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="proj-link" aria-label="GitHub repo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-title">Automated Attendance via Face Recognition</h3>
+          <p class="proj-desc">Real-time face recognition attendance system using CNN models and Tkinter. Logs attendance to CSV for 15 users. Optimised recognition accuracy by 95% via CLAHE preprocessing and multi-threading.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Python</span>
+            <span class="proj-tag">OpenCV</span>
+            <span class="proj-tag">Threading</span>
+            <span class="proj-tag">CNN</span>
+            <span class="proj-tag">Tkinter</span>
+          </div>
+          <div class="proj-year">2026</div>
+        </article>
+
+        <article class="project-card" id="proj-interviewai">
+          <div class="proj-header">
+            <div class="proj-icon">🎤</div>
+            <div class="proj-links">
+              <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="proj-link" aria-label="GitHub repo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-title">InterviewAI — Preparation Assistant</h3>
+          <p class="proj-desc">AI-driven mock interview platform built with React and Node.js. Integrated the OpenAI API to generate tailored interview questions and real-time feedback. Includes a performance analysis module with targeted improvement recommendations.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">React</span>
+            <span class="proj-tag">Node.js</span>
+            <span class="proj-tag">OpenAI API</span>
+            <span class="proj-tag">LLM</span>
+          </div>
+          <div class="proj-year">2026</div>
+        </article>
+
+        <article class="project-card" id="proj-hidc">
+          <div class="proj-header">
+            <div class="proj-icon">⚙️</div>
+            <div class="proj-links">
+              <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="proj-link" aria-label="GitHub repo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-title">Heterogeneous ISA Dynamic Core (HIDC)</h3>
+          <p class="proj-desc">Research project at NIT Calicut proposing a heterogeneous processor supporting dynamic ARM (RISC)/x86 (CISC) ISA switching via ML-based prediction — bridging mobile efficiency and desktop performance.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">ARM/x86 ISA</span>
+            <span class="proj-tag">ML Prediction</span>
+            <span class="proj-tag">Systems Design</span>
+          </div>
+          <div class="proj-year">NIT Calicut · 2026</div>
+        </article>
+
+        <article class="project-card" id="proj-qr">
+          <div class="proj-header">
+            <div class="proj-icon">📱</div>
+            <div class="proj-links">
+              <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="proj-link" aria-label="GitHub repo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-title">Smart QR Attendance System</h3>
+          <p class="proj-desc">Full-stack QR-based attendance system built with Django, React.js, and MySQL. Features role-based dashboards for students and faculty, attendance analytics, reporting, and QR scanning workflows with secure authentication.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Django</span>
+            <span class="proj-tag">React.js</span>
+            <span class="proj-tag">MySQL</span>
+            <span class="proj-tag">QR</span>
+          </div>
+          <div class="proj-year">BITS Pilani Bootcamp · 2026</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EXPERIENCE ══ -->
+  <section class="section section--alt" id="experience">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Experience</span>
+        <h2 class="section-title">Where I've Worked</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="tl-item" id="exp-bits">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <div class="tl-role">Technical Intern</div>
+                <div class="tl-org">BITS Pilani Bootcamp · Pilani, Rajasthan</div>
+              </div>
+              <div class="tl-date">May 2026 – Jul 2026</div>
+            </div>
+            <ul class="tl-points">
+              <li>Developed a Smart QR Attendance System using Django, React.js, and MySQL with secure authentication.</li>
+              <li>Built role-based dashboards for students and faculty with attendance analytics, reporting, and QR scanning workflows.</li>
+              <li>Applied AI fundamentals to build chatbots and automation tools via Git/GitHub collaboration.</li>
+              <li>Developed product-thinking skills through design thinking, MVP development, and startup pitching.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item" id="exp-nscc">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <div class="tl-role">Team Lead</div>
+                <div class="tl-org">NSCC BKBIET</div>
+              </div>
+            </div>
+            <ul class="tl-points">
+              <li>Led technical events, hackathons, and student workshops while coordinating community initiatives.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Achievements -->
+      <div class="achieve-row">
+        <div class="achieve-card" id="ach-1">
+          <span class="achieve-icon">🥉</span>
+          <div>
+            <div class="achieve-title">2nd Runner-Up</div>
+            <div class="achieve-sub">Beast Mode Hackathon · BKBIET, Pilani</div>
+          </div>
+        </div>
+        <div class="achieve-card" id="ach-2">
+          <span class="achieve-icon">🏆</span>
+          <div>
+            <div class="achieve-title">Best Innovator</div>
+            <div class="achieve-sub">BKBIET, Pilani</div>
+          </div>
+        </div>
+        <div class="achieve-card" id="ach-3">
+          <span class="achieve-icon">📜</span>
+          <div>
+            <div class="achieve-title">IIT Bombay Certified</div>
+            <div class="achieve-sub">C/C++ and Java Programming</div>
+          </div>
+        </div>
+        <div class="achieve-card" id="ach-4">
+          <span class="achieve-icon">📜</span>
+          <div>
+            <div class="achieve-title">ML for Cyber Security</div>
+            <div class="achieve-sub">Certified by Codec Technology</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-sub">I'm open to internship opportunities, collaborations, and interesting projects.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <a href="mailto:ranveersangwan22@gmail.com" class="contact-card" id="contact-email" aria-label="Send Email">
+          <div class="contact-icon">📧</div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">ranveersangwan22@gmail.com</div>
+        </a>
+
+        <a href="tel:+918000286981" class="contact-card" id="contact-phone" aria-label="Call">
+          <div class="contact-icon">📞</div>
+          <div class="contact-label">Phone</div>
+          <div class="contact-value">+91 8000286981</div>
+        </a>
+
+        <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="contact-card" id="contact-github" aria-label="GitHub Profile">
+          <div class="contact-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-value">ranveer6713</div>
+        </a>
+
+        <a href="https://linkedin.com/in/Ranveer-sangwan" target="_blank" rel="noopener" class="contact-card" id="contact-linkedin" aria-label="LinkedIn Profile">
+          <div class="contact-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">Ranveer-sangwan</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">Ranveer Sangwan</div>
+      <p class="footer-copy">© 2026 · Built with HTML5 & CSS3 · OIBSIP Task 3</p>
+      <div class="footer-links">
+        <a href="#home">Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
