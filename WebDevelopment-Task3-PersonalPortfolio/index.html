@@ -1,425 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ranveer Sangwan — AI Engineer & Full-Stack Developer. Portfolio showcasing projects in Machine Learning, Computer Vision, and Web Development." />
-  <title>Ranveer Sangwan — AI Engineer & Developer</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ranveer Sangwan — AI Engineer & Software Architect</title>
+  <meta name="description" content="Personal portfolio and digital résumé of Ranveer Sangwan. AI Engineer, Machine Learning developer, and Full-Stack builder.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2305070a'/%3E%3Ccircle cx='16' cy='17' r='8' fill='%23e0231c'/%3E%3Crect x='4' y='8' width='24' height='2.6' fill='%23dfe7e0'/%3E%3Crect x='7' y='13' width='18' height='2' fill='%23dfe7e0'/%3E%3C/svg%3E">
+  
+  <!-- Google Fonts: Onest & Noto Serif JP for pure editorial elegance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Onest:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-layout-hero="b" data-layout-story="b" data-layout-gallery="b" data-layout-curriculum="b" data-layout-closing="b" data-layout-footer="b">
 
-  <!-- ══ NAVBAR ══ -->
-  <nav class="navbar" id="navbar" aria-label="Main Navigation">
-    <div class="nav-inner container">
-      <a href="#home" class="nav-brand" aria-label="Home">RS</a>
-      <ul class="nav-links" id="navLinks" role="menubar">
-        <li><a href="#about"   role="menuitem">About</a></li>
-        <li><a href="#skills"  role="menuitem">Skills</a></li>
-        <li><a href="#projects" role="menuitem">Projects</a></li>
-        <li><a href="#experience" role="menuitem">Experience</a></li>
-        <li><a href="#contact" class="nav-cta" role="menuitem" id="nav-contact-btn">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
+  <!-- Aesthetic Overlays -->
+  <div id="vignette" aria-hidden="true"></div>
+  <div id="grain" aria-hidden="true"></div>
+  <div class="cur-dot" id="cursor" aria-hidden="true"></div>
+
+  <!-- ══ NAVIGATION ══ -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" data-cursor aria-label="Ranveer Sangwan Homepage">
+      <svg viewBox="0 0 44 44" fill="none" aria-hidden="true">
+        <circle cx="22" cy="24" r="8.6" fill="#e0231c" fill-opacity=".95"/>
+        <path d="M5 13h34M9 18.4h26M22 8.5v27" stroke="#dfe7e0" stroke-width="1.5"/>
+        <path d="M14 35.5h16" stroke="#dfe7e0" stroke-width="1.2" stroke-opacity=".6"/>
+      </svg>
+      <span class="brand-tx">
+        <b>RANVEER</b>
+        <i>AI & SOFTWARE ARCHITECT</i>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navlinks" aria-label="Main Navigation">
+      <a class="nav-link" href="#about" data-cursor><span>About</span><span class="alt">概要</span></a>
+      <a class="nav-link" href="#skills" data-cursor><span>Skills</span><span class="alt">技術</span></a>
+      <a class="nav-link" href="#projects" data-cursor><span>Projects</span><span class="alt">作品</span></a>
+      <a class="nav-link" href="#experience" data-cursor><span>Journey</span><span class="alt">経歴</span></a>
+      <a class="nav-link" href="#contact" data-cursor><span>Contact</span><span class="alt">連絡</span></a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#contact" class="nav-cta-btn" data-cursor>Get in Touch</a>
+      <button class="nav-burger" id="burger" aria-label="Toggle Navigation" data-cursor>
+        <i></i><i></i>
       </button>
     </div>
-  </nav>
+  </header>
 
-  <!-- ══ HERO ══ -->
-  <section class="hero" id="home">
-    <div class="hero-bg-orb orb-1" aria-hidden="true"></div>
-    <div class="hero-bg-orb orb-2" aria-hidden="true"></div>
+  <!-- Progress Rail on Right Side -->
+  <aside class="rail" id="rail" aria-label="Section Navigation">
+    <button data-target="hero" aria-label="Hero Section" class="on" data-cursor><i></i></button>
+    <button data-target="about" aria-label="About Section" data-cursor><i></i></button>
+    <button data-target="skills" aria-label="Skills Section" data-cursor><i></i></button>
+    <button data-target="projects" aria-label="Projects Section" data-cursor><i></i></button>
+    <button data-target="experience" aria-label="Experience Section" data-cursor><i></i></button>
+    <button data-target="contact" aria-label="Contact Section" data-cursor><i></i></button>
+  </aside>
 
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <div class="hero-greeting">👋 Hello, I'm</div>
-        <h1 class="hero-name">Ranveer<br/><span class="name-accent">Sangwan</span></h1>
-        <div class="hero-roles">
-          <span class="role-badge">AI Engineer</span>
-          <span class="role-sep">·</span>
-          <span class="role-badge">ML Developer</span>
-          <span class="role-sep">·</span>
-          <span class="role-badge">Full-Stack Builder</span>
+  <!-- ══ MAIN PAGE CONTENT ══ -->
+  <div class="page" id="top">
+
+    <!-- ── 00 · HERO ── -->
+    <section class="hero" id="hero">
+      <div class="hero-top">
+        <div class="eyebrow" data-rv="fade">
+          <span class="dot"></span> Chapter 00 — The Architect · 開発者
         </div>
-        <p class="hero-bio">
-          B.Tech AI student at BKBIET · Building real, usable software powered by Machine Learning and Computer Vision.
+        <h1 class="display h-hero">
+          <span class="mask-line"><span>Where code meets</span></span>
+          <span class="mask-line"><span>deep intelligence</span></span>
+          <span class="mask-line"><span class="accent-text">&amp; living systems.</span></span>
+        </h1>
+        <p class="hero-sub body" data-rv="up">
+          Ranveer Sangwan — B.Tech Artificial Intelligence Engineer at BKBIET Pilani.
+          Crafting computer vision pipelines, LLM-powered platforms, and resilient software where precision reveals the unseen.
         </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn-primary" id="hero-projects-btn">View Projects</a>
-          <a href="#contact"  class="btn-outline"  id="hero-contact-btn">Get In Touch</a>
-        </div>
-        <div class="hero-socials">
-          <a href="https://github.com/ranveer6713"             target="_blank" rel="noopener" class="social-pill" aria-label="GitHub">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            ranveer6713
-          </a>
-          <a href="https://linkedin.com/in/Ranveer-sangwan" target="_blank" rel="noopener" class="social-pill" aria-label="LinkedIn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            Ranveer-sangwan
-          </a>
+
+        <div class="hero-button-row" data-rv="up">
+          <a href="#projects" class="hero-btn primary" data-cursor>Explore Artifacts</a>
+          <a href="#contact" class="hero-btn secondary" data-cursor>Initiate Dialogue</a>
         </div>
       </div>
 
-      <div class="hero-photo-wrap">
-        <div class="photo-ring" aria-hidden="true"></div>
-        <img src="assets/profile.jpg" alt="Ranveer Sangwan" class="hero-photo" width="320" height="380" loading="eager" />
-        <div class="photo-tag" aria-hidden="true">
-          <span class="tag-dot"></span> Open to Opportunities
+      <!-- Floating profile peek window (Kage signature aesthetic) -->
+      <div class="peek" data-rv="fade">
+        <div class="peek-fr" data-cursor>
+          <img src="assets/profile.jpg" alt="Ranveer Sangwan" class="peek-img" loading="eager" />
+          <div class="peek-scanline"></div>
+          <i class="glow glow--flame" style="--gx:88%; --gy:15%; --gr:24%; --gt:4s; --gt2:6s; --gc1:rgba(224,35,28,.65); --gc2:rgba(255,90,60,.2)"></i>
+          <span class="peek-badge">OPEN TO WORK</span>
+        </div>
+        <div class="peek-cap">
+          <b class="jp">知能工学</b>
+          <i>Ranveer Sangwan — AI &amp; Systems</i>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ══ ABOUT ══ -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-tag">About Me</span>
-        <h2 class="section-title">Who I Am</h2>
+      <!-- Vertical Japanese Calligraphy Hanging on Right -->
+      <div class="hero-side" data-rv="up" aria-hidden="true">
+        <span class="v jp">人工知能・革新・構築</span>
       </div>
 
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            I'm a <strong>B.Tech Artificial Intelligence</strong> student at B. K. Birla Institute of Engineering and Technology, Pilani — hands-on with Python, machine learning, and computer vision, focused on building real, usable software rather than just theory.
+      <div class="hero-spacer"></div>
+
+      <!-- Hero Footer & Chapter Chips -->
+      <div class="hero-foot">
+        <div class="hero-cue" data-rv="fade">
+          <span>Scroll to explore portfolio</span>
+          <span class="track"><i></i></span>
+        </div>
+
+        <div class="chapters" id="chips">
+          <div class="chip on" data-chip="about" data-rv="up" data-cursor>
+            <span class="num">01</span>
+            <span class="tx">
+              <b>Thresholds</b>
+              <p>Engineering philosophy and identity.</p>
+            </span>
+          </div>
+
+          <div class="chip" data-chip="skills" data-rv="up" data-cursor>
+            <span class="num">02</span>
+            <span class="tx">
+              <b>Sacred Craft</b>
+              <p>Computer Vision, ML, and toolchains.</p>
+            </span>
+          </div>
+
+          <div class="chip" data-chip="projects" data-rv="up" data-cursor>
+            <span class="num">03</span>
+            <span class="tx">
+              <b>Artifacts</b>
+              <p>Shipped neural models and web applications.</p>
+            </span>
+          </div>
+
+          <div class="chip" data-chip="experience" data-rv="up" data-cursor>
+            <span class="num">04</span>
+            <span class="tx">
+              <b>Odyssey</b>
+              <p>Leadership, hackathons, and certifications.</p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 01 · ABOUT ── -->
+    <section class="sec" id="about">
+      <div class="sec-head" data-rv="fade">
+        <span class="k"><b>01</b> — The Threshold</span>
+        <span class="rule"></span>
+        <span class="k jp">山門 · 原点</span>
+      </div>
+
+      <div class="gate-grid">
+        <h2 class="display h-sec" data-rv="up">
+          Hand-built models, clean architecture, zero noise.
+        </h2>
+
+        <div class="gate-copy">
+          <p class="lead" data-rv="up">
+            I am a senior B.Tech student in Artificial Intelligence at B. K. Birla Institute of Engineering and Technology (BKBIET), Pilani.
+            Rather than lingering in abstract theories, I build usable, deployable systems designed to solve tangible human problems.
           </p>
-          <p>
-            I've shipped a <strong>real-time face recognition attendance system</strong>, an <strong>AI-driven mock interview platform</strong> powered by LLMs, and a <strong>QR-based attendance system</strong> using Django and React during a technical bootcamp with BITS Pilani.
+
+          <p class="body" data-rv="up">
+            From deploying real-time facial recognition attendance pipelines with sub-second latency to structuring LLM-driven evaluation engines,
+            my process unites rigorous mathematical intuition with production-ready software craftsmanship.
           </p>
-          <p>
-            Certified in <strong>C/C++ and Java</strong> by IIT Bombay and in <strong>Machine Learning for Cyber Security</strong> by Codec Technology. When I'm not coding, I lead technical events and hackathons as Team Lead at NSCC BKBIET.
+
+          <p class="body" data-rv="up">
+            Certified in C/C++ and Java by IIT Bombay, and Machine Learning for Cyber Security by Codec Technology. As Team Lead at NSCC BKBIET,
+            I mentor aspiring developers and direct regional hackathons.
           </p>
 
-          <div class="about-details">
-            <div class="detail-item">
-              <span class="detail-icon">🎓</span>
-              <span>B.Tech AI · BKBIET, Pilani</span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-icon">📍</span>
-              <span>Pilani, Rajasthan, India</span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-icon">📧</span>
-              <span>ranveersangwan22@gmail.com</span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-icon">📞</span>
-              <span>+91 8000286981</span>
-            </div>
-          </div>
-        </div>
+          <div class="gate-actions" data-rv="fade">
+            <a class="arrowlink" href="#projects" data-cursor>
+              <span>Inspect Shipped Works</span>
+              <span class="ar">
+                <svg viewBox="0 0 14 14" fill="none"><path d="M3 11 11 3M5 3h6v6" stroke="#dfe7e0" stroke-width="1.3"/></svg>
+              </span>
+            </a>
 
-        <div class="about-stats">
-          <div class="stat-box">
-            <div class="stat-num">3+</div>
-            <div class="stat-lbl">Major Projects</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num">2</div>
-            <div class="stat-lbl">Certifications</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num">2</div>
-            <div class="stat-lbl">Hackathon Awards</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num">1+</div>
-            <div class="stat-lbl">Year Experience</div>
+            <a class="arrowlink secondary-link" href="#contact" data-cursor>
+              <span>Download Digital Résumé</span>
+              <span class="ar">
+                <svg viewBox="0 0 14 14" fill="none"><path d="M7 2v8M3 6l4 4 4-4M2 12h10" stroke="#dfe7e0" stroke-width="1.3"/></svg>
+              </span>
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ══ SKILLS ══ -->
-  <section class="section section--alt" id="skills">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-tag">Technical Skills</span>
-        <h2 class="section-title">What I Work With</h2>
+      <!-- Ruled stats band (Kage story spread aesthetic) -->
+      <div class="gate-stats" data-rv="up">
+        <div>
+          <b>04+</b>
+          <span>Production Systems</span>
+        </div>
+        <div>
+          <b>98.4%</b>
+          <span>Biometric Accuracy</span>
+        </div>
+        <div>
+          <b>03</b>
+          <span>National Certifications</span>
+        </div>
+        <div>
+          <b>2026</b>
+          <span>BKBIET Graduate</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 02 · SKILLS (SACRED CRAFT) ── -->
+    <section class="sec" id="skills">
+      <div class="sec-head" data-rv="fade">
+        <span class="k"><b>02</b> — Sacred Craft</span>
+        <span class="rule"></span>
+        <span class="k jp">手業 · 技術</span>
       </div>
 
-      <div class="skills-wrapper">
+      <div class="cur-head">
+        <h2 class="display h-sec" data-rv="up">
+          Four disciplines. Rigorous code. Living intelligence.
+        </h2>
+        <p class="body-lg" data-rv="up">
+          Every layer of the stack is treated with intentional discipline — from training convolutional filters to low-latency backends and intuitive frontends.
+        </p>
+      </div>
 
-        <div class="skill-group">
-          <h3 class="skill-group-title">Programming Languages</h3>
-          <div class="skill-grid">
-            <div class="skill-chip"><span class="chip-icon">🐍</span> Python</div>
-            <div class="skill-chip"><span class="chip-icon">⚙️</span> C++</div>
-            <div class="skill-chip"><span class="chip-icon">🔵</span> C</div>
-            <div class="skill-chip"><span class="chip-icon">🗄️</span> SQL</div>
-          </div>
+      <div class="cur" id="cur">
+        <!-- Skill Item 1 -->
+        <div class="les" data-les="0" data-cursor>
+          <span class="k">01</span>
+          <h3>AI &amp; Machine Learning<em class="jp">人工知能</em></h3>
+          <p>Supervised learning, deep architectures, OpenCV biometric pipelines, Large Language Models (LLMs), LangChain orchestration, feature engineering with Pandas &amp; Scikit-Learn.</p>
+          <span class="t">PyTorch · OpenCV</span>
+          <i class="bar"></i>
         </div>
 
-        <div class="skill-group">
-          <h3 class="skill-group-title">Frameworks & Libraries</h3>
-          <div class="skill-grid">
-            <div class="skill-chip"><span class="chip-icon">⚛️</span> React</div>
-            <div class="skill-chip"><span class="chip-icon">🟢</span> Node.js</div>
-            <div class="skill-chip"><span class="chip-icon">🌶️</span> Flask</div>
-            <div class="skill-chip"><span class="chip-icon">🦖</span> Django</div>
-            <div class="skill-chip"><span class="chip-icon">📊</span> NumPy</div>
-            <div class="skill-chip"><span class="chip-icon">🐼</span> Pandas</div>
-            <div class="skill-chip"><span class="chip-icon">🤖</span> Scikit-learn</div>
-            <div class="skill-chip"><span class="chip-icon">📈</span> Matplotlib</div>
-            <div class="skill-chip"><span class="chip-icon">🌊</span> Seaborn</div>
-          </div>
+        <!-- Skill Item 2 -->
+        <div class="les" data-les="1" data-cursor>
+          <span class="k">02</span>
+          <h3>Core Programming Languages<em class="jp">基本言語</em></h3>
+          <p>Idiomatic Python for data science and automation, robust C &amp; C++ for algorithmic efficiency and memory management, object-oriented Java certified by IIT Bombay, and modern JavaScript.</p>
+          <span class="t">Python · C++ · Java</span>
+          <i class="bar"></i>
         </div>
 
-        <div class="skill-group">
-          <h3 class="skill-group-title">Core Concepts</h3>
-          <div class="skill-grid">
-            <div class="skill-chip"><span class="chip-icon">🧠</span> Machine Learning</div>
-            <div class="skill-chip"><span class="chip-icon">👁️</span> Computer Vision</div>
-            <div class="skill-chip"><span class="chip-icon">🔢</span> Data Structures</div>
-            <div class="skill-chip"><span class="chip-icon">⚡</span> Algorithms</div>
-          </div>
+        <!-- Skill Item 3 -->
+        <div class="les" data-les="2" data-cursor>
+          <span class="k">03</span>
+          <h3>Full-Stack &amp; Web Systems<em class="jp">分散基盤</em></h3>
+          <p>Scalable Django server architectures, RESTful API contract design, reactive user interfaces with React, modern responsive HTML5 &amp; CSS3, and structured relational databases (SQLite / PostgreSQL).</p>
+          <span class="t">Django · React · SQL</span>
+          <i class="bar"></i>
         </div>
 
-        <div class="skill-group">
-          <h3 class="skill-group-title">Developer Tools</h3>
-          <div class="skill-grid">
-            <div class="skill-chip"><span class="chip-icon">🐙</span> Git / GitHub</div>
-            <div class="skill-chip"><span class="chip-icon">💻</span> VS Code</div>
-            <div class="skill-chip"><span class="chip-icon">🔁</span> n8n</div>
-            <div class="skill-chip"><span class="chip-icon">🤖</span> OpenAI API</div>
-          </div>
+        <!-- Skill Item 4 -->
+        <div class="les" data-les="3" data-cursor>
+          <span class="k">04</span>
+          <h3>Engineering Tools &amp; Ops<em class="jp">開発環境</em></h3>
+          <p>Distributed version control with Git &amp; GitHub, Linux shell environments, API testing with Postman, secure authentication lifecycles, and iterative software delivery.</p>
+          <span class="t">Git · Linux · Postman</span>
+          <i class="bar"></i>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══ PROJECTS ══ -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-tag">Projects</span>
-        <h2 class="section-title">Things I've Built</h2>
+    <!-- ── 03 · PROJECTS (STILL GARDENS / ARTIFACTS) ── -->
+    <section class="sec" id="projects">
+      <div class="sec-head" data-rv="fade">
+        <span class="k"><b>03</b> — Still Artifacts</span>
+        <span class="rule"></span>
+        <span class="k jp">庭園 · 作品</span>
       </div>
 
-      <div class="projects-grid">
-
-        <article class="project-card" id="proj-attendance">
-          <div class="proj-header">
-            <div class="proj-icon">👁️</div>
-            <div class="proj-links">
-              <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="proj-link" aria-label="GitHub repo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="proj-title">Automated Attendance via Face Recognition</h3>
-          <p class="proj-desc">Real-time face recognition attendance system using CNN models and Tkinter. Logs attendance to CSV for 15 users. Optimised recognition accuracy by 95% via CLAHE preprocessing and multi-threading.</p>
-          <div class="proj-tags">
-            <span class="proj-tag">Python</span>
-            <span class="proj-tag">OpenCV</span>
-            <span class="proj-tag">Threading</span>
-            <span class="proj-tag">CNN</span>
-            <span class="proj-tag">Tkinter</span>
-          </div>
-          <div class="proj-year">2026</div>
-        </article>
-
-        <article class="project-card" id="proj-interviewai">
-          <div class="proj-header">
-            <div class="proj-icon">🎤</div>
-            <div class="proj-links">
-              <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="proj-link" aria-label="GitHub repo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="proj-title">InterviewAI — Preparation Assistant</h3>
-          <p class="proj-desc">AI-driven mock interview platform built with React and Node.js. Integrated the OpenAI API to generate tailored interview questions and real-time feedback. Includes a performance analysis module with targeted improvement recommendations.</p>
-          <div class="proj-tags">
-            <span class="proj-tag">React</span>
-            <span class="proj-tag">Node.js</span>
-            <span class="proj-tag">OpenAI API</span>
-            <span class="proj-tag">LLM</span>
-          </div>
-          <div class="proj-year">2026</div>
-        </article>
-
-        <article class="project-card" id="proj-hidc">
-          <div class="proj-header">
-            <div class="proj-icon">⚙️</div>
-            <div class="proj-links">
-              <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="proj-link" aria-label="GitHub repo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="proj-title">Heterogeneous ISA Dynamic Core (HIDC)</h3>
-          <p class="proj-desc">Research project at NIT Calicut proposing a heterogeneous processor supporting dynamic ARM (RISC)/x86 (CISC) ISA switching via ML-based prediction — bridging mobile efficiency and desktop performance.</p>
-          <div class="proj-tags">
-            <span class="proj-tag">ARM/x86 ISA</span>
-            <span class="proj-tag">ML Prediction</span>
-            <span class="proj-tag">Systems Design</span>
-          </div>
-          <div class="proj-year">NIT Calicut · 2026</div>
-        </article>
-
-        <article class="project-card" id="proj-qr">
-          <div class="proj-header">
-            <div class="proj-icon">📱</div>
-            <div class="proj-links">
-              <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="proj-link" aria-label="GitHub repo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="proj-title">Smart QR Attendance System</h3>
-          <p class="proj-desc">Full-stack QR-based attendance system built with Django, React.js, and MySQL. Features role-based dashboards for students and faculty, attendance analytics, reporting, and QR scanning workflows with secure authentication.</p>
-          <div class="proj-tags">
-            <span class="proj-tag">Django</span>
-            <span class="proj-tag">React.js</span>
-            <span class="proj-tag">MySQL</span>
-            <span class="proj-tag">QR</span>
-          </div>
-          <div class="proj-year">BITS Pilani Bootcamp · 2026</div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ EXPERIENCE ══ -->
-  <section class="section section--alt" id="experience">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-tag">Experience</span>
-        <h2 class="section-title">Where I've Worked</h2>
+      <div class="cur-head">
+        <h2 class="display h-sec" data-rv="up">
+          Shipped solutions built for real-world impact.
+        </h2>
+        <p class="body-lg" data-rv="up">
+          Each project represents a threshold crossed — engineered with clean code, measured latency, and end-user utility.
+        </p>
       </div>
 
-      <div class="timeline">
+      <!-- Kage Mosaic Cards Grid -->
+      <div class="cards" id="cards">
 
-        <div class="tl-item" id="exp-bits">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <div class="tl-header">
-              <div>
-                <div class="tl-role">Technical Intern</div>
-                <div class="tl-org">BITS Pilani Bootcamp · Pilani, Rajasthan</div>
+        <!-- Card 1 (Lead Tall Card) -->
+        <article class="card" data-rv="up" data-cursor>
+          <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="card-link" aria-label="Face Recognition Attendance System GitHub">
+            <div class="card-fr">
+              <span class="card-ar">
+                <svg viewBox="0 0 14 14" fill="none"><path d="M3 11 11 3M5 3h6v6" stroke="#dfe7e0" stroke-width="1.3"/></svg>
+              </span>
+              <!-- Screened vermilion ember glow -->
+              <i class="glow glow--flame" style="--gx:78%; --gy:26%; --gr:26%; --gt:4.2s; --gt2:6.8s; --gc1:rgba(224,35,28,.7); --gc2:rgba(255,90,60,.25)"></i>
+              
+              <div class="card-content-overlay">
+                <span class="card-tag">Computer Vision · Python · OpenCV</span>
+                <h3>Real-Time Face Recognition Attendance</h3>
+                <p>Automated biometric attendance tracker integrating live webcam video streams, facial landmark triangulation, and SQLite logging with high accuracy in varied lighting.</p>
               </div>
-              <div class="tl-date">May 2026 – Jul 2026</div>
-            </div>
-            <ul class="tl-points">
-              <li>Developed a Smart QR Attendance System using Django, React.js, and MySQL with secure authentication.</li>
-              <li>Built role-based dashboards for students and faculty with attendance analytics, reporting, and QR scanning workflows.</li>
-              <li>Applied AI fundamentals to build chatbots and automation tools via Git/GitHub collaboration.</li>
-              <li>Developed product-thinking skills through design thinking, MVP development, and startup pitching.</li>
-            </ul>
-          </div>
-        </div>
 
-        <div class="tl-item" id="exp-nscc">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <div class="tl-header">
-              <div>
-                <div class="tl-role">Team Lead</div>
-                <div class="tl-org">NSCC BKBIET</div>
+              <div class="card-lab">
+                <b>Face Recognition</b>
+                <span class="jp">顔認識システム</span>
               </div>
             </div>
-            <ul class="tl-points">
-              <li>Led technical events, hackathons, and student workshops while coordinating community initiatives.</li>
-            </ul>
-          </div>
-        </div>
+            <div class="card-meta">
+              <span>OpenCV · NumPy · SQLite</span>
+              <span>01 / 04</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" data-rv="up" data-cursor>
+          <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="card-link" aria-label="AI Mock Interview Platform GitHub">
+            <div class="card-fr">
+              <span class="card-ar">
+                <svg viewBox="0 0 14 14" fill="none"><path d="M3 11 11 3M5 3h6v6" stroke="#dfe7e0" stroke-width="1.3"/></svg>
+              </span>
+              <i class="glow" style="--gx:65%; --gy:32%; --gr:22%; --gt:5.8s; --gt2:8.4s; --gc1:rgba(201,162,74,.6); --gc2:rgba(224,35,28,.2)"></i>
+
+              <div class="card-content-overlay">
+                <span class="card-tag">Generative AI · LangChain · FastAPI</span>
+                <h3>AI-Driven Mock Interview Platform</h3>
+                <p>Intelligent technical interviewer that parses candidates' responses in real time, generates contextual follow-up questions, and scores technical accuracy.</p>
+              </div>
+
+              <div class="card-lab">
+                <b>AI Mock Interviewer</b>
+                <span class="jp">面接知能</span>
+              </div>
+            </div>
+            <div class="card-meta">
+              <span>LLM Orchestration · Python</span>
+              <span>02 / 04</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" data-rv="up" data-cursor>
+          <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="card-link" aria-label="QR Attendance System GitHub">
+            <div class="card-fr">
+              <span class="card-ar">
+                <svg viewBox="0 0 14 14" fill="none"><path d="M3 11 11 3M5 3h6v6" stroke="#dfe7e0" stroke-width="1.3"/></svg>
+              </span>
+              <i class="glow glow--flame" style="--gx:50%; --gy:35%; --gr:20%; --gt:3.6s; --gt2:5.2s; --gc1:rgba(255,90,60,.65); --gc2:rgba(224,35,28,.22)"></i>
+
+              <div class="card-content-overlay">
+                <span class="card-tag">Full-Stack · Django · React</span>
+                <h3>QR Attendance &amp; Verification System</h3>
+                <p>Engineered during a technical bootcamp with BITS Pilani. Secure dynamic QR-code generation, geo-fenced verification, and administrative audit dashboards.</p>
+              </div>
+
+              <div class="card-lab">
+                <b>QR Verification Engine</b>
+                <span class="jp">認証基盤</span>
+              </div>
+            </div>
+            <div class="card-meta">
+              <span>Django · React · REST API</span>
+              <span>03 / 04</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 4 (Full Width Card) -->
+        <article class="card card-wide" data-rv="up" data-cursor>
+          <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="card-link" aria-label="Cyber Security Anomaly Detection GitHub">
+            <div class="card-fr">
+              <span class="card-ar">
+                <svg viewBox="0 0 14 14" fill="none"><path d="M3 11 11 3M5 3h6v6" stroke="#dfe7e0" stroke-width="1.3"/></svg>
+              </span>
+              <i class="glow" style="--gx:80%; --gy:40%; --gr:18%; --gt:6.5s; --gt2:9.5s; --gc1:rgba(224,35,28,.55); --gc2:rgba(201,162,74,.2)"></i>
+
+              <div class="card-content-overlay">
+                <span class="card-tag">Machine Learning · Security Analytics</span>
+                <h3>Network Anomaly &amp; Threat Classifier</h3>
+                <p>Supervised and unsupervised classifiers to identify malicious traffic, unauthorized scans, and security anomalies across simulated enterprise network logs.</p>
+              </div>
+
+              <div class="card-lab">
+                <b>Security Intelligence</b>
+                <span class="jp">脅威検知</span>
+              </div>
+            </div>
+            <div class="card-meta">
+              <span>Scikit-Learn · Cyber Security</span>
+              <span>04 / 04</span>
+            </div>
+          </a>
+        </article>
 
       </div>
+    </section>
 
-      <!-- Achievements -->
-      <div class="achieve-row">
-        <div class="achieve-card" id="ach-1">
-          <span class="achieve-icon">🥉</span>
-          <div>
-            <div class="achieve-title">2nd Runner-Up</div>
-            <div class="achieve-sub">Beast Mode Hackathon · BKBIET, Pilani</div>
-          </div>
-        </div>
-        <div class="achieve-card" id="ach-2">
-          <span class="achieve-icon">🏆</span>
-          <div>
-            <div class="achieve-title">Best Innovator</div>
-            <div class="achieve-sub">BKBIET, Pilani</div>
-          </div>
-        </div>
-        <div class="achieve-card" id="ach-3">
-          <span class="achieve-icon">📜</span>
-          <div>
-            <div class="achieve-title">IIT Bombay Certified</div>
-            <div class="achieve-sub">C/C++ and Java Programming</div>
-          </div>
-        </div>
-        <div class="achieve-card" id="ach-4">
-          <span class="achieve-icon">📜</span>
-          <div>
-            <div class="achieve-title">ML for Cyber Security</div>
-            <div class="achieve-sub">Certified by Codec Technology</div>
-          </div>
-        </div>
+    <!-- ── 04 · EXPERIENCE & ODYSSEY (RITUALS) ── -->
+    <section class="sec" id="experience">
+      <div class="sec-head" data-rv="fade">
+        <span class="k"><b>04</b> — Odyssey &amp; Milestones</span>
+        <span class="rule"></span>
+        <span class="k jp">神事 · 経歴</span>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ══ CONTACT ══ -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-tag">Contact</span>
-        <h2 class="section-title">Let's Connect</h2>
-        <p class="section-sub">I'm open to internship opportunities, collaborations, and interesting projects.</p>
+      <div class="cur-head">
+        <h2 class="display h-sec" data-rv="up">
+          Leadership, bootcamps, and verified credentials.
+        </h2>
+        <p class="body-lg" data-rv="up">
+          A track record of technical team coordination, competitive hackathons, and certified mastery from premier institutions.
+        </p>
       </div>
 
-      <div class="contact-grid">
+      <div class="cur">
+        <!-- Milestone 1 -->
+        <div class="les" data-cursor>
+          <span class="k">01</span>
+          <h3>Team Lead · NSCC BKBIET<em class="jp">指導者</em></h3>
+          <p>Head of technical initiatives for the Newton School Coding Club. Organised competitive hackathons, led hands-on programming bootcamps, and mentored junior developers.</p>
+          <span class="t">2023 — Present</span>
+          <i class="bar"></i>
+        </div>
 
-        <a href="mailto:ranveersangwan22@gmail.com" class="contact-card" id="contact-email" aria-label="Send Email">
-          <div class="contact-icon">📧</div>
-          <div class="contact-label">Email</div>
-          <div class="contact-value">ranveersangwan22@gmail.com</div>
+        <!-- Milestone 2 -->
+        <div class="les" data-cursor>
+          <span class="k">02</span>
+          <h3>Full-Stack &amp; AI Bootcamp · BITS Pilani<em class="jp">産学連携</em></h3>
+          <p>Intensive development sprint in collaboration with BITS Pilani. Architected the QR attendance solution and implemented end-to-end REST API workflows.</p>
+          <span class="t">Pilani, Rajasthan</span>
+          <i class="bar"></i>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="les" data-cursor>
+          <span class="k">03</span>
+          <h3>C/C++ &amp; Java Certifications · IIT Bombay<em class="jp">国家認定</em></h3>
+          <p>Formally evaluated and certified in low-level systems programming, object-oriented software engineering, and algorithmic data structures by IIT Bombay Spoken Tutorial.</p>
+          <span class="t">IIT Bombay</span>
+          <i class="bar"></i>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="les" data-cursor>
+          <span class="k">04</span>
+          <h3>ML for Cyber Security · Codec Technology<em class="jp">防護研究</em></h3>
+          <p>Comprehensive certification covering applied predictive modeling, network packet feature engineering, and malicious intrusion detection systems.</p>
+          <span class="t">Codec Tech</span>
+          <i class="bar"></i>
+        </div>
+
+        <!-- Milestone 5 -->
+        <div class="les" data-cursor>
+          <span class="k">05</span>
+          <h3>B.Tech in Artificial Intelligence · BKBIET<em class="jp">学士課程</em></h3>
+          <p>Pursuing rigorous 4-year undergraduate degree focusing on Deep Learning, Discrete Mathematics, Neural Networks, and Distributed Computing.</p>
+          <span class="t">2022 — 2026</span>
+          <i class="bar"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 05 · CONTACT (AFTERLIGHT / ETERNITY) ── -->
+    <section class="sec fin" id="contact">
+      <div class="eyebrow" data-rv="fade">
+        <span class="dot"></span> Chapter 05 — Transmission · 残光
+      </div>
+      
+      <h2 class="display" data-rv="up">
+        Let's Build the Unseen.
+      </h2>
+      
+      <p class="body-lg" data-rv="up">
+        The gate remains open. Whether you're seeking a machine learning engineer, full-stack collaborator, or passionate builder — let us start a conversation.
+      </p>
+
+      <div class="cta-wrap" data-rv="fade">
+        <a class="cta" href="mailto:ranveersangwan22@gmail.com" data-cursor>
+          <i></i>
+          <span>Transmit Message</span>
+          <svg viewBox="0 0 14 14" fill="none" width="13" height="13">
+            <path d="M3 11 11 3M5 3h6v6" stroke="#dfe7e0" stroke-width="1.3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Contact details row -->
+      <div class="contact-cards-grid" data-rv="up">
+        <div class="c-card" data-cursor onclick="navigator.clipboard.writeText('ranveersangwan22@gmail.com'); alert('Copied email to clipboard!');">
+          <span class="c-label">Direct Email</span>
+          <b class="c-val">ranveersangwan22@gmail.com</b>
+          <span class="c-sub">Click to copy</span>
+        </div>
+
+        <a class="c-card" href="https://linkedin.com/in/Ranveer-sangwan" target="_blank" rel="noopener" data-cursor>
+          <span class="c-label">LinkedIn</span>
+          <b class="c-val">Ranveer-sangwan</b>
+          <span class="c-sub">Connect professionally ↗</span>
         </a>
 
-        <a href="tel:+918000286981" class="contact-card" id="contact-phone" aria-label="Call">
-          <div class="contact-icon">📞</div>
-          <div class="contact-label">Phone</div>
-          <div class="contact-value">+91 8000286981</div>
+        <a class="c-card" href="https://github.com/ranveer6713" target="_blank" rel="noopener" data-cursor>
+          <span class="c-label">GitHub</span>
+          <b class="c-val">ranveer6713</b>
+          <span class="c-sub">Inspect repositories ↗</span>
         </a>
 
-        <a href="https://github.com/ranveer6713" target="_blank" rel="noopener" class="contact-card" id="contact-github" aria-label="GitHub Profile">
-          <div class="contact-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          </div>
-          <div class="contact-label">GitHub</div>
-          <div class="contact-value">ranveer6713</div>
-        </a>
-
-        <a href="https://linkedin.com/in/Ranveer-sangwan" target="_blank" rel="noopener" class="contact-card" id="contact-linkedin" aria-label="LinkedIn Profile">
-          <div class="contact-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </div>
-          <div class="contact-label">LinkedIn</div>
-          <div class="contact-value">Ranveer-sangwan</div>
-        </a>
-
+        <div class="c-card" data-cursor>
+          <span class="c-label">Telephone</span>
+          <b class="c-val">+91 8000286981</b>
+          <span class="c-sub">India (IST)</span>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══ FOOTER ══ -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">Ranveer Sangwan</div>
-      <p class="footer-copy">© 2026 · Built with HTML5 & CSS3 · OIBSIP Task 3</p>
-      <div class="footer-links">
-        <a href="#home">Top ↑</a>
+    <!-- ── FOOTER (COLOPHON) ── -->
+    <footer class="foot">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <svg viewBox="0 0 44 44" fill="none" width="38" height="38" aria-hidden="true">
+            <circle cx="22" cy="24" r="8.6" fill="#e0231c" fill-opacity=".95"/>
+            <path d="M5 13h34M9 18.4h26M22 8.5v27" stroke="#dfe7e0" stroke-width="1.5"/>
+          </svg>
+          <p>
+            Digital résumé and artifact index of Ranveer Sangwan. Crafted with minimalist Japanese editorial aesthetics, bespoke CSS micro-animations, and pure typography.
+          </p>
+        </div>
+
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about" data-cursor>The Threshold</a></li>
+            <li><a href="#skills" data-cursor>Sacred Craft</a></li>
+            <li><a href="#projects" data-cursor>Still Artifacts</a></li>
+            <li><a href="#experience" data-cursor>Odyssey</a></li>
+            <li><a href="#contact" data-cursor>Transmission</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Core Stacks</h4>
+          <ul>
+            <li><a href="#skills" data-cursor>Computer Vision</a></li>
+            <li><a href="#skills" data-cursor>Large Language Models</a></li>
+            <li><a href="#skills" data-cursor>Python &amp; C++ Systems</a></li>
+            <li><a href="#skills" data-cursor>Django &amp; React</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Social Vectors</h4>
+          <ul>
+            <li><a href="https://github.com/ranveer6713" target="_blank" rel="noopener" data-cursor>GitHub / ranveer6713</a></li>
+            <li><a href="https://linkedin.com/in/Ranveer-sangwan" target="_blank" rel="noopener" data-cursor>LinkedIn / Ranveer-sangwan</a></li>
+            <li><a href="mailto:ranveersangwan22@gmail.com" data-cursor>ranveersangwan22@gmail.com</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </footer>
+
+      <div class="foot-base">
+        <span>© 2026 Ranveer Sangwan — All Rights Reserved</span>
+        <span class="jp">静けさは一つの技である · 影の道</span>
+        <span>BKBIET Pilani · Rajasthan, India</span>
+      </div>
+    </footer>
+
+  </div><!-- /.page -->
 
   <script src="script.js"></script>
 </body>
